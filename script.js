@@ -6,7 +6,11 @@ const rl = readline.createInterface({
 });
 
 rl.question("Which letter of the alphabet would you like to remove? ", (letterToRemove) => {
-  if (!letterToRemove || letterToRemove.length !== 1 || !/[a-zA-Z]/.test(letterToRemove)) {
+  if (
+    !letterToRemove || 
+    letterToRemove.length !== 1 || 
+    !/[a-zA-Z]/.test(letterToRemove)
+  ) {
     console.log("Please enter a single letter of the alphabet.");
     rl.close();
     return;
